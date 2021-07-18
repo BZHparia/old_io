@@ -11,6 +11,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" href="images/test_transparency.png">
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.5/brython.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.5/brython_stdlib.min.js"></script> -->
+		<script src="brython_lib/brython.js"></script>
+		<script src="brython_lib/brython_stdlib.js"></script>
 	</head>
 	<body id="top">
 
@@ -51,6 +55,25 @@
 								</audio>
 							</div>
 
+						</div>
+
+						<div>
+							<body onload="brython()">
+								<script type="text/python">
+								
+								from browser import document
+								from browser.widgets.dialog import InfoDialog
+								
+								def click(ev):
+									InfoDialog("Hello", f"Bonjour, {document['zone'].value} !")
+								
+								# associe une fonction à l'événement "click" sur le bouton
+								document["echo"].bind("click", click)
+								
+								</script>
+								<input id="zone">
+								<button id="echo">click !</button>
+								</body>
 						</div>
 						
 
