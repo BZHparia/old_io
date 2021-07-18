@@ -17,111 +17,115 @@
 		<script src="brython_lib/brython_stdlib.js"></script>
 	</head>
 	<body id="top">
+		<h1>START</h1>
+		<div>
+			<div onload="brython()">
+				<script type="text/python">
+				
+					# importing the required module
+					import matplotlib.pyplot as plt
+					
+					# x axis values
+					x = [1,2,3]
+					# corresponding y axis values
+					y = [2,4,1]
+					
+					# plotting the points 
+					plt.plot(x, y)
+					
+					# naming the x axis
+					plt.xlabel('x - axis')
+					# naming the y axis
+					plt.ylabel('y - axis')
+					
+					# giving a title to my graph
+					plt.title('My first graph!')
+					
+					# function to show the plot
+					plt.show()
+				
+				</script>
+				<!-- <input id="zone">
+				<button id="echo">click !</button> -->
 
-			<!-- Banner -->
-			<!--
-				To use a video as your background, set data-video to the name of your video without
-				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
-				formats to work correctly.
-			-->
-				<section id="banner" data-video="images/banner">
-					<div class="inner">
-						<header>
-							<h1>Bienvenue sur mon portfolio</h1>
-							<p>Vous pouvez me retrouver sur <a href="https://www.linkedin.com/in/th%C3%A9o-dufaza-135397132" target="_blank">LinkedIn</a></p>
-						</header>
-						<a href="#main" class="more">Learn more</a>
-					</div>
-				</section>
+				<!-- <script type="text/python" src="py_scripts/test.py"></script> -->
+			</div>
+		</div>
+		<h1>END</h1>
 
-			<!-- Main -->
-				<div id="main">
-					<div class="inner">
 
-					<!-- Boxes -->
-						<div class="thumbnails">
+		<!-- Banner -->
+		<!--
+			To use a video as your background, set data-video to the name of your video without
+			its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+			formats to work correctly.
+		-->
+		<section id="banner" data-video="images/banner">
+			<div class="inner">
+				<header>
+					<h1>Bienvenue sur mon portfolio</h1>
+					<p>Vous pouvez me retrouver sur <a href="https://www.linkedin.com/in/th%C3%A9o-dufaza-135397132" target="_blank">LinkedIn</a></p>
+				</header>
+				<a href="#main" class="more">Learn more</a>
+			</div>
+		</section>
 
-							<div class="box">
-								<a href="https://youtu.be/tgbNymZ7vqY?autoplay=1" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
-								<div class="inner">
-									<h3>Funny ^^</h3>
-									<a href="https://youtu.be/tgbNymZ7vqY?autoplay=1" class="button fit" data-poptrox="youtube,800x400">Regarder</a>
-								</div>
-							</div>
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-							<div class="box">
-								<audio controls autoplay style="display: flex;">
-									<source src="songs/marquises.mp3" type="audio/mpeg">
-								</audio>
-							</div>
+			<!-- Boxes -->
+				<div class="thumbnails">
 
+					<div class="box">
+						<a href="https://youtu.be/tgbNymZ7vqY?autoplay=1" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+						<div class="inner">
+							<h3>Funny ^^</h3>
+							<a href="https://youtu.be/tgbNymZ7vqY?autoplay=1" class="button fit" data-poptrox="youtube,800x400">Regarder</a>
 						</div>
-
-						<div>
-							<body onload="brython()">
-								<script type="text/python">
-								
-									# importing the required module
-									import matplotlib.pyplot as plt
-									
-									# x axis values
-									x = [1,2,3]
-									# corresponding y axis values
-									y = [2,4,1]
-									
-									# plotting the points 
-									plt.plot(x, y)
-									
-									# naming the x axis
-									plt.xlabel('x - axis')
-									# naming the y axis
-									plt.ylabel('y - axis')
-									
-									# giving a title to my graph
-									plt.title('My first graph!')
-									
-									# function to show the plot
-									plt.show()
-								
-								</script>
-								<!-- <input id="zone">
-								<button id="echo">click !</button> -->
-
-								<!-- <script type="text/python" src="py_scripts/test.py"></script> -->
-							</body>
-						</div>
-						
-
-						<!-- <div>
-							<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-						</div> -->
-
 					</div>
+
+					<div class="box">
+						<audio controls autoplay style="display: flex;">
+							<source src="songs/marquises.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
 				</div>
 
-			<!-- Footer -->
-				<footer id="footer">
-					<div class="inner">
-						<h2>Fin</h2>
-						<p><a href="https://youtu.be/tul6zYBp9tA?t=22">Mes réseaux</a></p>
+				
+				
 
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
-					</div>
-				</footer>
+				<!-- <div>
+					<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+				</div> -->
+
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<h2>Fin</h2>
+				<p><a href="https://youtu.be/tul6zYBp9tA?t=22">Mes réseaux</a></p>
+
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
+			</div>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
