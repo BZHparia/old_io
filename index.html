@@ -9,7 +9,7 @@
 		<title>Portfolio Dufaza</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" href="images/test.png">
+		<link rel="icon" href="images/test2.png">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.5/brython.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.5/brython_stdlib.min.js"></script> -->
@@ -59,22 +59,35 @@
 
 						<div>
 							<body onload="brython()">
-								<!-- <script type="text/python">
+								<script type="text/python">
 								
-									from browser import document
-									from browser.widgets.dialog import InfoDialog
+									# importing the required module
+									import matplotlib.pyplot as plt
 									
-									def click(ev):
-										InfoDialog("Hello", f"Bonjour, {document['zone'].value} !")
+									# x axis values
+									x = [1,2,3]
+									# corresponding y axis values
+									y = [2,4,1]
 									
-									# associe une fonction à l'événement "click" sur le bouton
-									document["echo"].bind("click", click)
+									# plotting the points 
+									plt.plot(x, y)
+									
+									# naming the x axis
+									plt.xlabel('x - axis')
+									# naming the y axis
+									plt.ylabel('y - axis')
+									
+									# giving a title to my graph
+									plt.title('My first graph!')
+									
+									# function to show the plot
+									plt.show()
 								
 								</script>
-								<input id="zone">
+								<!-- <input id="zone">
 								<button id="echo">click !</button> -->
 
-								<script type="text/python" src="py_scripts/test.py"></script>
+								<!-- <script type="text/python" src="py_scripts/test.py"></script> -->
 							</body>
 						</div>
 						
