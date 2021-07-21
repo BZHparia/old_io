@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Full Motion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 	<head>
 		<title>Portfolio</title>
@@ -16,9 +11,82 @@
 		<script src="brython_lib/brython.js"></script>
 		<script src="brython_lib/brython_stdlib.js"></script>
 	</head>
-	<body>
-		<div onload="brython()">
-			<script type="text/python" src="py_scripts/test.py"></script>
+	<body id="top">
+		<!-- Banner -->
+		<!--
+			To use a video as your background, set data-video to the name of your video without
+			its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+			formats to work correctly.
+		-->
+		<section id="banner" data-video="images/banner">
+			<div class="inner">
+				<header>
+					<h1>Bienvenue sur mon portfolio</h1>
+					<p>Vous pouvez me retrouver sur <a href="https://www.linkedin.com/in/th%C3%A9o-dufaza-135397132" target="_blank">LinkedIn</a></p>
+				</header>
+				<a href="#main" class="more">Learn more</a>
+			</div>
+		</section>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+			<!-- Boxes -->
+				<div class="thumbnails">
+
+					<div class="box">
+						<a href="https://youtu.be/tgbNymZ7vqY?autoplay=1" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+						<div class="inner">
+							<h3>Funny ^^</h3>
+							<a href="https://youtu.be/tgbNymZ7vqY?autoplay=1" class="button fit" data-poptrox="youtube,800x400">Regarder</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<audio controls autoplay style="display: flex;">
+							<source src="songs/marquises.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+				</div>
+
+				
+				
+
+				<!-- <div>
+					<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+				</div> -->
+
+			</div>
 		</div>
+
+
+		
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<h2>Fin</h2>
+				<p><a href="https://youtu.be/tul6zYBp9tA?t=22">Mes réseaux</a></p>
+
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<p class="copyright">&copy; Dfz Corp. Design: <a href="https://www.linkedin.com/in/th%C3%A9o-dufaza-135397132" target="_blank">by me :3</a>. Images: <a href="https://acidmoto.ch/cms/sites/default/files/img/epsilon/d/ducati-monster-1200-r-diamond-atelier_0.jpg" target="_blank">Ducato</a>. Videos: <a href="https://www.youtube.com/watch?v=ufVXBAkFXR4?autoplay=1">Yt</a>.</p>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
 	</body>
 </html>
