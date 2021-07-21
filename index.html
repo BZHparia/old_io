@@ -12,29 +12,49 @@
 	</head>
 	<body onload="brython()">
 		<script type="text/python">
-			# importing the required module
-			import matplotlib.pyplot as plt
-			
-			# x axis values
-			x = [1,2,3]
-			# corresponding y axis values
-			y = [2,4,1]
-			
-			# plotting the points 
-			plt.plot(x, y)
-			
-			# naming the x axis
-			plt.xlabel('x - axis')
-			# naming the y axis
-			plt.ylabel('y - axis')
-			
-			# giving a title to my graph
-			plt.title('My first graph!')
-			
-			# function to show the plot
-			plt.show()
+			from browser import document
+			import turtle
+
+			turtle.set_defaults(
+				canvheight = 400,
+				turtle_canvas_wrapper = document["turtle-div"]
+			)
+
+			def draw_square(t):
+				t.begin_fill()
+				for i in range(4):
+					t.forward(40)
+					t.left(90)
+				t.end_fill()
+
+			for name,c,y in [(None, "black", 150),  # same as "classic"
+							("classic", "blue", 100),
+							("arrow", "orange", 50),
+							("circle", "red", -50),
+							("square", "purple",-100),
+							("triangle", "brown", -150),
+							("turtle", ("green", "white"), 0)]:
+				if name is not None:
+					t = turtle.Turtle(name)
+				else:
+					t = turtle.Turtle()
+					screen = t.getscreen()
+					screen.bgcolor("rgb(255, 255, 200)")
+				t.penup()
+				if len(c) == 2:
+					t.color(c[0], c[1])
+				else:
+					t.color(c)
+				t.goto(-100, y)
+				t.pendown()
+				draw_square(t)
+				t.penup()
+				t.forward(100)
+				t.stamp()
+				t.forward(100)
+			screen.bgcolor("white")
+
+			turtle.done()
 		</script>
-		<input id="zone" autocomplete="off">
-		<button id="mybutton">click!</button>
 	</body>
 </html>
