@@ -10,51 +10,7 @@
 		<script src="brython_lib/brython_stdlib.js"></script>
 
 	</head>
-	<body onload="brython()">
-		<script type="text/python">
-			from browser import document
-			import turtle
-
-			turtle.set_defaults(
-				canvheight = 400,
-				turtle_canvas_wrapper = document["turtle-div"]
-			)
-
-			def draw_square(t):
-				t.begin_fill()
-				for i in range(4):
-					t.forward(40)
-					t.left(90)
-				t.end_fill()
-
-			for name,c,y in [(None, "black", 150),  # same as "classic"
-							("classic", "blue", 100),
-							("arrow", "orange", 50),
-							("circle", "red", -50),
-							("square", "purple",-100),
-							("triangle", "brown", -150),
-							("turtle", ("green", "white"), 0)]:
-				if name is not None:
-					t = turtle.Turtle(name)
-				else:
-					t = turtle.Turtle()
-					screen = t.getscreen()
-					screen.bgcolor("rgb(255, 255, 200)")
-				t.penup()
-				if len(c) == 2:
-					t.color(c[0], c[1])
-				else:
-					t.color(c)
-				t.goto(-100, y)
-				t.pendown()
-				draw_square(t)
-				t.penup()
-				t.forward(100)
-				t.stamp()
-				t.forward(100)
-			screen.bgcolor("white")
-
-			turtle.done()
-		</script>
+	<body>
+		<iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@souleater481/test?lite=true"></iframe>
 	</body>
 </html>
