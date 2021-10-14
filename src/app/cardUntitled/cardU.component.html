@@ -1,0 +1,12 @@
+
+<a class= "cleaner" target="_blank" rel="noopener">
+  <img src={{img}} width="30" height="30">
+
+  <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+</a>
+<p>{{description}}</p>
+
+<div *ngIf="allLinks.length > 1">
+  <p style="padding: 8px 0 8px 0">Choisir un rôle de démo:</p>
+  <button mat-stroked-button style="margin: 4px 5px 4px 0px;" (click)="goToUrl(link)" *ngFor="let link of allLinks; let i = index">{{allNames[i]}}</button>
+</div>
